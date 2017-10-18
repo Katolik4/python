@@ -1,11 +1,8 @@
 from machine import Pin
 from neopixel import NeoPixel
+import urandom
 import math
 from time import sleep
-
-def test():
-    a = WS_class()
-    a.test()
 
 class WS_class():
 
@@ -52,5 +49,23 @@ class WS_class():
         self.np[1] = (0, 0, 0)
         self.np[2] = (0, 0, 0)
         self.np.write()
+
+    def random(self, t):
+
+        while t > 0:
+
+            for i in xrange(8):
+                r = urandom(8)
+                g = urandom(8)
+                b = urandom(8)
+                self.np[i] = (r, g, b)
+
+            self.np.write()
+            sleep(1)
+            t -= 1
+
+
+
+
 
 
