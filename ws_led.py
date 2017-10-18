@@ -50,14 +50,19 @@ class WS_class():
         self.np[2] = (0, 0, 0)
         self.np.write()
 
+    def alloff(self):
+        for i in range(8):
+            self.np[i] = (0,0,0)
+        self.np.write()
+
     def random(self, t):
 
         while t > 0:
 
             for i in range(8):
-                r = urandom.getrandbits(8)
-                g = urandom.getrandbits(8)
-                b = urandom.getrandbits(8)
+                r = urandom.getrandbits(7)
+                g = urandom.getrandbits(7)
+                b = urandom.getrandbits(7)
                 self.np[i] = (r, g, b)
 
             self.np.write()
