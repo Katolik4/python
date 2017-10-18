@@ -54,10 +54,10 @@ class WS_class():
 
         while t > 0:
 
-            for i in xrange(8):
-                r = urandom(8)
-                g = urandom(8)
-                b = urandom(8)
+            for i in range(8):
+                r = urandom.getrandbits(8)
+                g = urandom.getrandbits(8)
+                b = urandom.getrandbits(8)
                 self.np[i] = (r, g, b)
 
             self.np.write()
