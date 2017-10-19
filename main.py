@@ -1,4 +1,5 @@
 import network
+import sleep
 
 
 class MAIN():
@@ -20,6 +21,7 @@ class MAIN():
 
         while self.station.isconnected() == False:
             print("\n łączenie")
+            sleep(0.5)
 
         print("Połączono")
 
