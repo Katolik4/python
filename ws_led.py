@@ -60,10 +60,8 @@ class WS_class():
         while t > 0:
 
             for i in range(8):
-                r = urandom.getrandbits(7)
-                g = urandom.getrandbits(7)
-                b = urandom.getrandbits(7)
-                self.np[i] = (r, g, b)
+                h = urandom.getrandbits(8)
+                self.np[i] = (WS_class.hsvtorgb(h,0.5,0.5))
 
             self.np.write()
             sleep(1)

@@ -12,7 +12,7 @@ class MAIN():
         print("ESP gotowe")
 
     def wifiisconnected(self):
-        if station.isconnected() == True:
+        if self.station.isconnected() == True:
             print("Połączono")
             return
 
