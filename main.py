@@ -31,4 +31,5 @@ class wifi():
             print("ssid: %s,        chanel: %s, RSSI: %s, authmode: %s, hidden: %s" % (n[0], n[2], n[3], n[4], n[5]))
 
 if __name__ == '__main__':
-    wifi.scan()
+    esp = wifi()
+    return esp
