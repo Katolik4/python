@@ -56,7 +56,6 @@ class WS_class():
         self.np.write()
 
     def random(self, t, okres):
-
         while t > 0:
 
             for i in range(8):
@@ -66,8 +65,8 @@ class WS_class():
             self.np.write()
             sleep(okres)
             t -= 1
-    def allcolors(self):
 
+    def allcolors(self):
         c = 0
 
         while c < 360:
@@ -79,6 +78,15 @@ class WS_class():
             self.np.write()
             sleep(0.05)
             c += 1
+
+    def linijka(self, color):
+        for i in range(8):
+            self.np[i] = (self.hsvtorgb(color, 1, 0.5))
+        self.np.write()
+
+    def dioda(self, nr, color):
+        self.np[nr] = (self.hsvtorgb(color, 1, 0.5))
+        self.np.write()
 
 
 
