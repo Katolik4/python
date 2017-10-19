@@ -10,7 +10,7 @@ class wifi():
         self.ssid = "Dom_Smocza"
         self.password = "biednykarzel"
         self.station.active(True)
-        print("ESP gotowe")
+        print("espwifi - ustawienia Wifi: .scan .connect .isconnected")
 
     def isconnected(self):
         if self.station.isconnected() == True:
@@ -35,10 +35,8 @@ class wifi():
 
 
 if __name__ == '__main__':
-    espwifi = wifi()
-    espws = ws_led.WS_class()
 
     print('######################### \n')
-    print("espwifi - ustawienia Wifi: .scan .connect .isconnected")
-    print("espws - diody ws2812: .test .alloff .random(ile,co ile) .allcolors .linijka(kolor) .dioda(nr, color)")
+    espwifi = wifi()
+    espws = ws_led.WS_class()
     print("######################### \n")
