@@ -55,17 +55,30 @@ class WS_class():
             self.np[i] = (0,0,0)
         self.np.write()
 
-    def random(self, t):
+    def random(self, t, okres):
 
         while t > 0:
 
             for i in range(8):
                 h = urandom.getrandbits(8)
-                self.np[i] = (WS_class.hsvtorgb(h,0.5,0.5))
+                self.np[i] = (self.hsvtorgb(h, 1, 0.5))
 
             self.np.write()
-            sleep(1)
+            sleep(okres)
             t -= 1
+    def allcolors(self):
+
+        c = 0
+
+        while c < 360:
+
+            for i in range(8):
+                h = c + i
+                self.np[i] = (self.hsvtorgb(h, 1, 0.5))
+
+            self.np.write()
+            sleep(0.05)
+            c += 1
 
 
 
