@@ -28,8 +28,11 @@ class wifi():
     def scan(self):
         a = self.station.scan()
         for n in a:
-            print("ssid: %s,        chanel: %s, RSSI: %s, authmode: %s, hidden: %s" % (n[0], n[2], n[3], n[4], n[5]))
+            print("ssid: %s   chanel: %s    RSSI: %s    authmode: %s" % (n[0], n[2], n[3], n[4]))
+
+
+
 
 if __name__ == '__main__':
-    esp = wifi()
-    return esp
+    print("espwifi - ustawienia Wifi: .scan .connect .isconnected")
+    espwifi = wifi()
