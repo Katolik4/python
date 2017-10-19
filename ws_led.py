@@ -83,11 +83,11 @@ class WS_class():
 
     def linijka(self, color):
         for i in range(8):
-            self.np[i] = (self.hsvtorgb(color, 1, 0.5))
+            self.np[i] = (self.hsvtorgb(color, self.sat, self.val))
         self.np.write()
 
     def dioda(self, nr, color):
-        self.np[nr] = (self.hsvtorgb(color, 1, 0.5))
+        self.np[nr] = (self.hsvtorgb(color, self.sat, self.val))
         self.np.write()
 
 

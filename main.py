@@ -2,7 +2,7 @@ import network
 import time
 
 
-class MAIN():
+class wifi():
 
     def __init__(self):
         self.station= network.WLAN(network.STA_IF)
@@ -11,12 +11,12 @@ class MAIN():
         self.station.active(True)
         print("ESP gotowe")
 
-    def wifiisconnected(self):
+    def isconnected(self):
         if self.station.isconnected() == True:
             print("Połączono")
             return
 
-    def wificonnect(self):
+    def connect(self):
         self.station.connect(self.ssid, self.password)
 
         while self.station.isconnected() == False:
@@ -25,7 +25,10 @@ class MAIN():
 
         print("Połączono")
 
-    def wifiscan(self):
+    def scan(self):
         a = self.station.scan()
         for n in a:
             print("ssid: %s,        chanel: %s, RSSI: %s, authmode: %s, hidden: %s" % (n[0], n[2], n[3], n[4], n[5]))
+
+if __name__ == '__main__':
+    wifi.scan()
