@@ -8,6 +8,8 @@ class WS_class():
 
     def __init__(self):
         self.np = NeoPixel(Pin(13), 8)
+        self.sat = 1
+        self.val = 0.2
         print("inicjacja WS")
 
     def hsvtorgb(self, h, s, v):
@@ -60,7 +62,7 @@ class WS_class():
 
             for i in range(8):
                 h = urandom.getrandbits(8)
-                self.np[i] = (self.hsvtorgb(h, 1, 0.5))
+                self.np[i] = (self.hsvtorgb(h, self.sat, self.val))
 
             self.np.write()
             sleep(okres)
@@ -72,12 +74,12 @@ class WS_class():
         while c < 360:
 
             for i in range(8):
-                h = c + i
-                self.np[i] = (self.hsvtorgb(h, 1, 0.5))
+                h = c + i*5
+                self.np[i] = (self.hsvtorgb(h, self.sat, self.val))
 
             self.np.write()
             sleep(0.05)
-            c += 1
+            c += 5
 
     def linijka(self, color):
         for i in range(8):
