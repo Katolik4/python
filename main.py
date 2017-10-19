@@ -1,5 +1,5 @@
 import network
-import sleep
+import time
 
 
 class MAIN():
