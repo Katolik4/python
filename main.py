@@ -38,5 +38,5 @@ if __name__ == '__main__':
 
     print('######################### \n')
     espwifi = wifi()
-    espws = ws_led.WS_class()
+    espws = ws_led.WS()
     print("######################### \n")

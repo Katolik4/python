@@ -4,12 +4,13 @@ import urandom
 import math
 from time import sleep
 
-class WS_class():
+class WS():
 
-    def __init__(self):
-        self.np = NeoPixel(Pin(13), 8)
+    def __init__(self, number=8):
+        self.np = NeoPixel(Pin(13), number)
         self.sat = 1
         self.val = 0.2
+	self.number = number
         print("espws - diody ws2812: .alloff .random(ile,co ile) .allcolors .linijka(kolor) .dioda(nr, color)")
 
     def hsvtorgb(self, h, s, v):
@@ -53,27 +54,28 @@ class WS_class():
         self.np.write()
 
     def alloff(self):
-        for i in range(8):
+        for i in range(self.number):
             self.np[i] = (0,0,0)
         self.np.write()
 
     def random(self, t, okres):
         while t > 0:
 
-            for i in range(8):
+            for i in range(self.number):
                 h = urandom.getrandbits(8)
                 self.np[i] = self.hsvtorgb(h, self.sat, self.val)
 
             self.np.write()
             sleep(okres)
             t -= 1
+	self.alloff()
 
     def allcolors(self):
         c = 0
 
         while c < 360:
 
-            for i in range(8):
+            for i in range(self.number):
                 h = c + i*5
                 self.np[i] = self.hsvtorgb(h, self.sat, self.val)
 
@@ -82,7 +84,7 @@ class WS_class():
             c += 5
 
     def linijka(self, color):
-        for i in range(8):
+        for i in range(self.number):
             self.np[i] = self.hsvtorgb(color, self.sat, self.val)
         self.np.write()
 
