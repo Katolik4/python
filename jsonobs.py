@@ -1,8 +1,10 @@
-import ujson
+try:
+    import json
+except ImportError:
+    import ujson as json
 
-f = open('config.json', 'r')
-c = ujson.loads(f.read())
+with open('config.json', 'r') as f:
+    c = json.loads(f.read())
+
 siec = c['siec']
 print(siec['ssid'])
-#print(c)
-f.close()
