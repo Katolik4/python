@@ -1,6 +1,7 @@
 import network
 import time
 import ws_led
+import ujson
 
 
 class wifi():
@@ -21,7 +22,7 @@ class wifi():
         self.station.connect(self.ssid, self.password)
 
         while self.station.isconnected() == False:
-            print("\n łączenie")
+            print("łączenie")
             time.sleep(0.5)
 
         print("Połączono")
@@ -30,6 +31,7 @@ class wifi():
         a = self.station.scan()
         for n in a:
             print("ssid: %s   chanel: %s    RSSI: %s    authmode: %s" % (n[0], n[2], n[3], n[4]))
+
 
 
 

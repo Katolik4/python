@@ -1,0 +1,9 @@
+{"piny": {
+  "gpio1" : "test",
+  "gpio2" : "dupa"
+},
+  "siec": {
+    "ssid": "ssid sieci",
+    "pass": "haslo"
+  }
+}

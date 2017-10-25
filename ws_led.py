@@ -10,7 +10,7 @@ class WS():
         self.np = NeoPixel(Pin(13), number)
         self.sat = 1
         self.val = 0.2
-	self.number = number
+        self.number = number
         print("espws - diody ws2812: .alloff .random(ile,co ile) .allcolors .linijka(kolor) .dioda(nr, color)")
 
     def hsvtorgb(self, h, s, v):
@@ -68,7 +68,7 @@ class WS():
             self.np.write()
             sleep(okres)
             t -= 1
-	self.alloff()
+        self.alloff()
 
     def allcolors(self):
         c = 0
