@@ -1,6 +1,6 @@
 {
   "piny": {
-    "gpio1": "test",
+    "i2c_sda": "test",
     "gpio2": "dupa"
   },
   "siec": {

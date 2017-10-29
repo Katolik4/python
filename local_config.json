@@ -1,0 +1,10 @@
+{
+  "piny": {
+    "i2c_sda": "dupa",
+    "gpio2": "dupa"
+  },
+  "siec": {
+    "ssid": "dupa",
+    "pass": "dupa"
+  }
+}

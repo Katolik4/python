@@ -2,14 +2,19 @@ import network
 import time
 import ws_led
 import ujson
+from config import ConfigPL
+
+cfg = ConfigPL()
+siec = cfg.siec['ssid']
+password = cfg.siec['pass']
 
 
-class wifi():
+class WiFi():
 
-    def __init__(self):
+    def __init__(self, ssid=siec, password=password):
         self.station= network.WLAN(network.STA_IF)
-        self.ssid = "Dom_Smocza"
-        self.password = "biednykarzel"
+        self.ssid = ssid
+        self.password = password
         self.station.active(True)
         print("espwifi - ustawienia Wifi: .scan .connect .isconnected")
 
@@ -39,6 +44,6 @@ class wifi():
 if __name__ == '__main__':
 
     print('######################### \n')
-    espwifi = wifi()
+    espwifi = WiFi()
     espws = ws_led.WS()
     print("######################### \n")
