@@ -2,6 +2,7 @@ import network
 import time
 import ws_led
 import ujson
+import oled
 from config import ConfigPL
 
 cfg = ConfigPL()
@@ -46,4 +47,5 @@ if __name__ == '__main__':
     print('######################### \n')
     espwifi = WiFi()
     espws = ws_led.WS()
+    espoled = oled.Oled()
     print("######################### \n")
