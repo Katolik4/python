@@ -32,6 +32,7 @@ class WiFi():
             time.sleep(0.5)
 
         print("Połączono")
+        print(self.station.ifconfig())
 
     def scan(self):
         a = self.station.scan()
@@ -44,8 +45,8 @@ class WiFi():
 
 if __name__ == '__main__':
 
-    print('######################### \n')
+    print('#########################')
     espwifi = WiFi()
     espws = ws_led.WS()
     espoled = oled.Oled()
-    print("######################### \n")
+    print('#########################')
