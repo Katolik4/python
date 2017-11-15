@@ -19,6 +19,7 @@ aby z każdego miejsca w systemie był widziany `micropython`
     sudo ln -s $(pwd)/micropython /usr/local/bin/micropython
 
 - upip  
-instalacja biblioteki - instaluje domyślnie w `$HOME/.micropython/lib/`
+instalacja biblioteki - instaluje domyślnie w `$HOME/.micropython/lib/`  
+(zobacz: `micropython -m upip`)
 
       micropython -m upip install micropython-pystone
