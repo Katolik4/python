@@ -103,3 +103,4 @@ ENV/
 .ropeproject
 
 /local_config.json
+python_image.bin
