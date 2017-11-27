@@ -25,6 +25,7 @@ class Config():
         return self.config['siec']
 
 
+
 class ConfigPL(Config):
     @property
     def siec(self):

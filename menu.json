@@ -1,0 +1,12 @@
+
+{
+  "Ustawienia LED": {
+    "kolor": "4",
+    "natezenie": "5"
+  },
+  "Minutnik": {
+    "minuty": "30",
+    "sekundy": "00"
+  },
+  "Wylacz":""
+}
