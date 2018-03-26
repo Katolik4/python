@@ -1,7 +1,7 @@
 import machine
 import utime
 
-class Led_board()
+class Led_board():
 
     def __init__(self):
         self.led = machine.Pin(2, machine.Pin.OUT)
