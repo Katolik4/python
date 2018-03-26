@@ -8,5 +8,14 @@
     "minuty": "30",
     "sekundy": "00"
   },
+  "Ustawienia":{
+    "Dane sieci" : "cos",
+    "Dane sieci1" : "cos",
+    "Dane sieci2" : "cos",
+    "Dane sieci3" : "cos",
+    "Dane sieci4" : "cos",
+    "Dane sieci5" : "cos",
+    "Dane sieci6" : "cos"
+  },
   "Wylacz":""
 }
