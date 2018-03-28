@@ -9,7 +9,7 @@ class Mqtt:
         print("Połączono z %s", self.server)
 
     def connect(self):
-        self.c = MQTT.MQTTClient(self.client, self.server, 1883, "esp")
+        self.c = MQTT.MQTTClient(self.client, self.server)
         self.c.connect()
 
     def sub_cb(self, topic, msg):
