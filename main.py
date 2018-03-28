@@ -3,6 +3,7 @@ import time
 import ws_led
 import ujson
 import oled
+import qq
 from config import ConfigPL
 
 cfg = ConfigPL()
@@ -49,4 +50,5 @@ if __name__ == '__main__':
     espwifi = WiFi()
     espws = ws_led.WS()
     espoled = oled.Oled()
+    espmqtt = qq.Mqtt()
     print('#########################')

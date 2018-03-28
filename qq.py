@@ -17,6 +17,7 @@ class Mqtt:
 
     def set_cb(self):
         self.c.set_callback(self.sub_cb)
+
     def sub_block(self):
         self.c.wait_msg()
 
