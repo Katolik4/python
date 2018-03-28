@@ -1,6 +1,6 @@
 import MQTT
 
-class Mqtt():
+class Mqtt:
 
     def __init__(self):
         self.server = "192.168.0.11"
