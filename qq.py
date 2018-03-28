@@ -6,6 +6,7 @@ class Mqtt:
         self.server = "192.168.0.11"
         self.client = "ESP12E"
         self.connect()
+        print("Połączono z %s", self.server)
 
     def connect(self):
         self.c = MQTT.MQTTClient(self.client, self.server, 1883, "esp")
